@@ -1,0 +1,144 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.4.1'
+	id 'io.spring.dependency-management' version '1.1.7'
+}
+
+group = 'yunhan'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(21)
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+
+dependencies {
+	// JWT 관련 의존성
+	// JWT API (컴파일 시 필요)
+	implementation 'io.jsonwebtoken:jjwt-api:0.11.5'
+	// JWT 구현체 (런타임 시 필요)
+	runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.5'
+	// JSON 파싱용 (런타임 시 필요)
+	runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.11.5'
+
+	// Spring Boot 기본 의존성들
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	// Spring Boot Starter Web은 내장 Tomcat을 포함하므로, 별도의 Tomcat 의존성은 제거합니다.
+	// implementation "org.springframework.boot:spring-boot-starter-tomcat"
+
+	// MySQL 커넥터 (중복 제거)
+	//implementation 'com.mysql:mysql-connector-java:8.0.29'
+	implementation 'mysql:mysql-connector-java:8.0.33'
+	//implementation 'com.mysql:mysql-connector-java:8.0.33'
+
+	// runtimeOnly 'com.mysql:mysql-connector-j'  // 제거
+
+	// Spring Data JPA
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+	// Lombok
+	implementation 'org.projectlombok:lombok:1.18.24'
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
+	// Spring Security
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	// Spring Security 관련 의존성는 spring-boot-starter-security에 의해 관리됩니다.
+	// testImplementation 'org.springframework.security:spring-security-web:5.8.0'  // 주석 처리
+
+	// 추가 기능 의존성
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+	// Test 의존성
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	testImplementation 'org.springframework.security:spring-security-test'
+
+	// javax.xml.bind 관련 의존성
+	implementation "com.sun.xml.bind:jaxb-impl:4.0.1"
+	implementation "com.sun.xml.bind:jaxb-core:4.0.1"
+	implementation "javax.xml.bind:jaxb-api:2.4.0-b180830.0359"
+
+
+	implementation 'com.google.firebase:firebase-admin:9.2.0'
+	implementation 'com.google.cloud:google-cloud-storage:2.24.0'
+
+	implementation 'commons-fileupload:commons-fileupload:1.4'
+
+	implementation group: 'com.google.firebase', name: 'firebase-admin', version: '8.0.1'
+
+/////
+	// MyBatis Spring Boot Starter
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.3'
+
+	// MySQL 사용 시 추가
+	implementation 'mysql:mysql-connector-java'
+
+	// Spring Boot Starter JDBC (MyBatis와 함께 사용)
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+
+	// twinword api
+	implementation 'org.asynchttpclient:async-http-client:2.12.3'
+
+	//비동기
+	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+
+	//캐쉬
+	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+	implementation 'org.springframework.boot:spring-boot-starter-cache'
+	implementation 'com.fasterxml.jackson.core:jackson-databind'
+	implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
+}
+
+
+
+//dependencies {
+//	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+//	implementation 'org.springframework.boot:spring-boot-starter-web'
+//	runtimeOnly 'com.mysql:mysql-connector-j'
+//	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+//	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+//
+//	implementation 'mysql:mysql-connector-java:8.0.29'  // 최신 버전 확인
+//	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+//
+//	implementation 'org.projectlombok:lombok:1.18.24' // 최신 버전으로 사용
+//	compileOnly 'org.projectlombok:lombok'
+//	annotationProcessor 'org.projectlombok:lombok'
+//
+//
+//	implementation 'org.springframework.boot:spring-boot-starter-security'
+//
+//	implementation 'org.springframework.boot:spring-boot-starter-validation'
+//
+//
+//
+//	// Spring Security
+//	implementation 'org.springframework.security:spring-security-web:5.8.0'
+//	implementation "org.springframework.boot:spring-boot-starter-security"
+//	testImplementation "org.springframework.security:spring-security-test"
+//
+//	// JWT
+//	//implementation files('libs/jjwt-0.11.5.jar')
+//	implementation 'io.jsonwebtoken:jjwt:0.11.5'
+//	// jjwt 라이브러리만 사용
+//
+//	// javax.xml.bind.DatatypeConverter 오류 해결
+//	implementation "com.sun.xml.bind:jaxb-impl:4.0.1"
+//	implementation "com.sun.xml.bind:jaxb-core:4.0.1"
+//	implementation "javax.xml.bind:jaxb-api:2.4.0-b180830.0359"
+//
+//
+//}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
+
