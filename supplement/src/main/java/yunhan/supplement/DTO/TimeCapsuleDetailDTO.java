@@ -1,5 +1,6 @@
 package yunhan.supplement.DTO;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -16,6 +17,7 @@ public class TimeCapsuleDetailDTO {
     private String title;
     private String content;
     private String imagePath;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss")
     private LocalDateTime openDate;
     private Boolean isOpened;
     //private List<Integer> userIds;  // ✅ 공유된 친구 ID 리스트
