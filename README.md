@@ -17,7 +17,7 @@ Redis 기반 캐싱 성능 최적화를 포함합니다.
 친구 기능 + 감정 분석을 갖춘 **종합 감성 SNS** 개발.
 
 ### ✔ 2) 캐시 시스템 도입을 통한 성능 개선  
-친구 목록과 감정 분석처럼 반복성 높은 기능에 Redis 캐시를 적용하여  
+친구 목록처럼 반복성 높은 기능에 Redis 캐시를 적용하여  
 **최대 7.8배 성능 향상**을 목표로 함.  
 
 ---
@@ -40,6 +40,20 @@ Redis 기반 캐싱 성능 최적화를 포함합니다.
 
 # 🛠 Tech Stack
 
+##  프론트엔드
+- Flutter
+
+##  백엔드
+- Java  
+- Spring Boot  
+- Spring Boot Security (JWT)  
+- Redis  
+- Twinword Emotion API  
+
+## DB
+- MySQL
+- Firebase Storage
+  
 | 분야 | 기술 |
 |------|------|
 | Framework | Spring Boot |
@@ -66,20 +80,3 @@ Redis 기반 캐싱 성능 최적화를 포함합니다.
 | **Cache Server** | Redis | • 친구 목록 캐싱 <br>• 반복 요청 API 속도 개선 (약 7.8배 향상) |
 | **Emotion Analysis API** | Twinword API  | • 일기 내용 감정 분석 <br>• 6가지 감정 분류 |
 
----
-
-# 🛠️ 기술 스택 (Tech Stack)
-
-##  프론트엔드
-- Flutter
-
-##  백엔드
-- Java  
-- Spring Boot  
-- Spring Boot Security (JWT)  
-- Redis  
-- Twinword Emotion API  
-
-## DB
-- MySQL
-- Firebase Storage
