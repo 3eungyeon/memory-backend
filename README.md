@@ -63,7 +63,7 @@ Redis 기반 캐싱 성능 최적화를 포함합니다.
 | **Backend API Server** | Spring Boot (REST API) | • 전체 비즈니스 로직 처리 <br>• 사용자 인증(JWT) <br>• 일기/타임캡슐 CRUD <br>• 친구 요청/수락/목록 조회 <br>• 감정 분석 API 호출 <br>• Redis & MySQL 연동 |
 | **Authentication** | JWT | • 로그인 시 JWT 발급 <br>• 모든 요청 헤더에 Authorization 포함 <br>• 토큰 유효성 검사 후 사용자 인증 |
 | **Database** | MySQL | • 사용자 정보 저장 <br>• 일기/타임캡슐/친구 관계 저장 <br>• 감정 분석 결과 저장 |
-| **Cache Server** | Redis | • 친구 목록 캐싱 <br>• 감정 분석 결과 캐싱 <br>• 반복 요청 API 속도 개선 (약 7.8배 향상) |
+| **Cache Server** | Redis | • 친구 목록 캐싱 <br>• 반복 요청 API 속도 개선 (약 7.8배 향상) |
 | **Emotion Analysis API** | Twinword API  | • 일기 내용 감정 분석 <br>• 6가지 감정 분류 |
 
 ---
