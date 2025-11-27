@@ -48,11 +48,15 @@ Redis 기반 캐싱 성능 최적화를 포함합니다.
 - Spring Boot  
 - Spring Boot Security (JWT)  
 - Redis  
-- Twinword Emotion API  
+- Twinword Emotion API
+- Google Translate API
 
 ## DB
 - MySQL
 - Firebase Storage
+
+## 기타
+- EC2
 ---
 
  
