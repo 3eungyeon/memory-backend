@@ -39,7 +39,17 @@ Redis 기반 캐싱 성능 최적화를 포함합니다.
 ---
 
 # 🛠 Tech Stack
-
+  
+| 분야 | 기술 |
+|------|------|
+| Framework | Spring Boot |
+| Language | Java |
+| Database | MySQL |
+| Cache | Redis |
+| Authentication | JWT |
+| Emotion API | Twinword  |
+| Client | Flutter |
+| Build Tool | Gradle |
 ##  프론트엔드
 - Flutter
 
@@ -53,18 +63,6 @@ Redis 기반 캐싱 성능 최적화를 포함합니다.
 ## DB
 - MySQL
 - Firebase Storage
-  
-| 분야 | 기술 |
-|------|------|
-| Framework | Spring Boot |
-| Language | Java |
-| Database | MySQL |
-| Cache | Redis |
-| Authentication | JWT |
-| Emotion API | Twinword  |
-| Client | Flutter |
-| Build Tool | Gradle |
-
 ---
 
  
