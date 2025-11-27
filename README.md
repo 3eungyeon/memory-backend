@@ -65,3 +65,18 @@ Redis 기반 캐싱 성능 최적화를 포함합니다.
 | **Database** | MySQL | • 사용자 정보 저장 <br>• 일기/타임캡슐/친구 관계 저장 <br>• 감정 분석 결과 저장 |
 | **Cache Server** | Redis | • 친구 목록 캐싱 <br>• 감정 분석 결과 캐싱 <br>• 반복 요청 API 속도 개선 (약 7.8배 향상) |
 | **Emotion Analysis API** | Twinword API  | • 일기 내용 감정 분석 <br>• 6가지 감정 분류 |
+
+# 🛠️ 기술 스택 (Tech Stack)
+
+## 🎨 프론트엔드
+- Flutter
+
+## 🧩 백엔드
+- Java  
+- Spring Boot  
+- Spring Boot Security (JWT)  
+- MySQL  
+- Redis  
+- Twinword Emotion API  
+
+
